@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta CPF/CNPJ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Consulta CPF/CNPJ</h1>
+
+  <form id="consulta-form" onsubmit="event.preventDefault(); fetchData();">
+    <label for="tipo">Tipo:</label>
+    <select id="tipo">
+      <option value="cpf">CPF</option>
+      <option value="cnpj">CNPJ</option>
+    </select>
+    <br><br>
+
+    <label for="documento">CPF/CNPJ:</label>
+    <input type="text" id="documento" placeholder="Digite CPF ou CNPJ">
+    <br><br>
+
+    <button type="submit">Buscar Dados</button>
+  </form>
+
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>Campo</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dados da API serão inseridos aqui -->
+    </tbody>
+  </table>
+</body>
+
+</html>
